@@ -2,6 +2,7 @@
     <sys_ux_app_route action="INSERT_OR_UPDATE">
         <app_config display_value="NeedIt Experience">f30d66941b0d0510b81fdce7cc4bcb52</app_config>
         <description/>
+        <extension_point/>
         <fields>table</fields>
         <icon/>
         <name>Simple List</name>

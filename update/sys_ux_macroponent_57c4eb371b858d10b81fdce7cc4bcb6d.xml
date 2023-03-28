@@ -1924,8 +1924,11 @@
   },
   "readEvaluationMode" : "EXPLICIT"
 } ]</data>
+        <description/>
         <dispatched_events>63528a5ff5fbc1a94533ca7f94b74edb,93e48589a9ee4a69f8d3f5d45ffeb05d</dispatched_events>
+        <ext_controller_dep/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
         <handled_events>509663140f0310107d20409dc4767e00,f8d5cc6c0f0310107d20409dc4767e51,835ec4a00f4310107d20409dc4767eaa,b94818a0cc2cebbe41369181e4c8d6a6,48639d350fe310107d20409dc4767e87,3bcac58cb7731010cd8af8e32e11a971,5a979750533f101035beddeeff7b1231,86a6b0fdb72a2010cd8a1df32e11a9ce</handled_events>
         <interactions/>
         <interfaces/>
@@ -2159,6 +2162,7 @@
 }</layout>
         <macroponent_dependencies/>
         <name>Record</name>
+        <output_prop_mapping/>
         <props>[ {
   "name" : "screen",
   "label" : "screen",
@@ -2564,4 +2568,5 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-01-21 21:08:59</sys_updated_on>
     </sys_ux_macroponent>
+    <sys_translated_text action="delete_multiple" query="documentkey=57c4eb371b858d10b81fdce7cc4bcb6d"/>
 </record_update>
