@@ -775,8 +775,11 @@
 } ]</composition>
         <da_relay_models/>
         <data>[ ]</data>
+        <description/>
         <dispatched_events>ec26f77f1b858d10b81fdce7cc4bcb12</dispatched_events>
+        <ext_controller_dep/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
         <handled_events/>
         <interactions/>
         <interfaces/>
@@ -796,6 +799,7 @@
 }</layout>
         <macroponent_dependencies/>
         <name>Home</name>
+        <output_prop_mapping/>
         <props>[ ]</props>
         <required_translations>[ {
   "message" : "My Active NeedIts",
@@ -825,4 +829,5 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-01-24 17:48:09</sys_updated_on>
     </sys_ux_macroponent>
+    <sys_translated_text action="delete_multiple" query="documentkey=daba02771b818d10b81fdce7cc4bcb66"/>
 </record_update>

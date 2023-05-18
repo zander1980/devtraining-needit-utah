@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping">
     <sys_ux_addon_event_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
+        <controller/>
         <description/>
         <name>Record default Add Entitlement</name>
         <parent_macroponent display_value="Record">57c4eb371b858d10b81fdce7cc4bcb6d</parent_macroponent>
+        <source_component/>
         <source_da display_value="Add Entitlement">539c40770b12301021fd092db4673aee</source_da>
         <source_element_id>ui_action_bar</source_element_id>
         <sys_class_name>sys_ux_addon_event_mapping</sys_class_name>
@@ -15,13 +17,13 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Record default Add Entitlement</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Asset Management Workspace" source="sn_itam_workspace">54b90b435d70f410f87728dca52fcfea</sys_package>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_ux_addon_event_mapping_35d4ef371b858d10b81fdce7cc4bcbe6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-01-21 21:02:53</sys_updated_on>
-        <target_event display_value="RECORD#NAV_ITEM_SELECTED">835ec4a00f4310107d20409dc4767eaa</target_event>
+        <target_event display_value="[Record Page] Item Selected">835ec4a00f4310107d20409dc4767eaa</target_event>
         <target_payload_mapping>{&#13;
   "type": "MAP_CONTAINER",&#13;
   "container": {&#13;

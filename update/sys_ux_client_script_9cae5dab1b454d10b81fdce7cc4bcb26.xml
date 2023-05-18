@@ -3,6 +3,7 @@
         <includes/>
         <macroponent display_value="Simple List">bf9e5dab1b454d10b81fdce7cc4bcb0e</macroponent>
         <name>simpleListModal</name>
+        <preset/>
         <required_translations>[ ]</required_translations>
         <script><![CDATA[function handler({
         api,
@@ -40,6 +41,7 @@
         <sys_update_name>sys_ux_client_script_9cae5dab1b454d10b81fdce7cc4bcb26</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-01-20 16:39:02</sys_updated_on>
+        <target/>
         <type>default</type>
     </sys_ux_client_script>
 </record_update>
