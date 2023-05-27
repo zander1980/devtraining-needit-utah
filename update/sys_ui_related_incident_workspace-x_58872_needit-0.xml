@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="incident" version="2" view="workspace-needit-0">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Incident - Workspace NeedIt 0" name="incident" related_list="NULL" sys_domain="global" view="6e2a95b5e7072110f0442ece44f10134">ed3a1db547072110ff50249bd36d43ec</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>task_sla.task</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-05-27 08:17:15</sys_created_on>
+            <sys_id>293a1db547072110ff50249bd36d43ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-05-27 08:17:15</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Incident - Workspace NeedIt 0" name="incident" related_list="NULL" sys_domain="global" view="6e2a95b5e7072110f0442ece44f10134">ed3a1db547072110ff50249bd36d43ec</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>task_ci.task</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-05-27 08:17:15</sys_created_on>
+            <sys_id>2d3a1db547072110ff50249bd36d43ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-05-27 08:17:15</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Incident - Workspace NeedIt 0" name="incident" related_list="NULL" sys_domain="global" view="6e2a95b5e7072110f0442ece44f10134">ed3a1db547072110ff50249bd36d43ec</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>task_cmdb_ci_service.task</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-05-27 08:17:15</sys_created_on>
+            <sys_id>213a1db547072110ff50249bd36d43ee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-05-27 08:17:15</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Incident - Workspace NeedIt 0" name="incident" related_list="NULL" sys_domain="global" view="6e2a95b5e7072110f0442ece44f10134">ed3a1db547072110ff50249bd36d43ec</list_id>
+            <order_by/>
+            <position>3</position>
+            <related_list>task_service_offering.task</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-05-27 08:17:15</sys_created_on>
+            <sys_id>e93a1db547072110ff50249bd36d43fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-05-27 08:17:15</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Incident - Workspace NeedIt 0" name="incident" related_list="NULL" sys_domain="global" view="6e2a95b5e7072110f0442ece44f10134">ed3a1db547072110ff50249bd36d43ec</list_id>
+            <order_by/>
+            <position>4</position>
+            <related_list>incident.parent_incident</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-05-27 08:17:15</sys_created_on>
+            <sys_id>ed3a1db547072110ff50249bd36d43fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-05-27 08:17:15</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Incident - Workspace NeedIt 0" name="incident" related_list="NULL" sys_domain="global" view="6e2a95b5e7072110f0442ece44f10134">ed3a1db547072110ff50249bd36d43ec</list_id>
+            <order_by/>
+            <position>5</position>
+            <related_list>sc_request.parent</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-05-27 08:17:15</sys_created_on>
+            <sys_id>e13a1db547072110ff50249bd36d43fb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-05-27 08:17:15</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Incident - Workspace NeedIt 0" name="incident" related_list="NULL" sys_domain="global" view="6e2a95b5e7072110f0442ece44f10134">ed3a1db547072110ff50249bd36d43ec</list_id>
+            <order_by/>
+            <position>6</position>
+            <related_list>interaction_related_record.task</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-05-27 08:17:15</sys_created_on>
+            <sys_id>e53a1db547072110ff50249bd36d43fb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-05-27 08:17:15</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Incident - Workspace NeedIt 0</calculated_name>
+            <filter/>
+            <name>incident</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-05-27 08:17:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ed3a1db547072110ff50249bd36d43ec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Incident - Workspace-x 58872 needit-0</sys_name>
+            <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+            <sys_update_name>sys_ui_related_incident_Workspace-x_58872_needit-0</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-05-27 08:17:15</sys_updated_on>
+            <sys_user/>
+            <view display_value="Workspace NeedIt 0" name="workspace-needit-0">6e2a95b5e7072110f0442ece44f10134</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

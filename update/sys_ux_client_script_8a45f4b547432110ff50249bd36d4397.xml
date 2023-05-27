@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="On-Call Recommended">4145b4b547432110ff50249bd36d433e</macroponent>
+        <name>Update recommended group</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    if (api.data.get_recommended_groups) {
+        var recommendedGroups = [];
+        if (api.data.get_recommended_groups.output.result) {
+            recommendedGroups = Object.keys(api.data.get_recommended_groups.output.result);
+        }
+
+        api.setState('onCallDateTime', '');
+        api.setState('recommendedGroups', recommendedGroups.join(','));
+
+        if (recommendedGroups && recommendedGroups.length > 0) {
+            // Dispatch event to show the search link
+            api.emit('RECOMMENDED_GROUPS_LOADED', {'hideSearchLink': true});
+        } else {
+            api.setState('onCallLoading', false);
+            // Dispatch event to hide the search link
+            api.emit('RECOMMENDED_GROUPS_LOADED', {'hideSearchLink': false});
+        }
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 05:35:53</sys_created_on>
+        <sys_id>8a45f4b547432110ff50249bd36d4397</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update recommended group</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_client_script_8a45f4b547432110ff50249bd36d4397</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 05:35:53</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

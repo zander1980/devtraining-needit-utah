@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_filter">
+    <sys_search_filter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <ais_search_source display_value="Tasks - Incidents">13bf8fe1531201107f03ddeeff7b1274</ais_search_source>
+        <label>Incident</label>
+        <name>Tasks - Incidents</name>
+        <order>300</order>
+        <search_context_config display_value="NeedIt AI Search Configuration">662a95b51b072110ec317d7c68743d35</search_context_config>
+        <sys_class_name>sys_search_filter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 08:17:12</sys_created_on>
+        <sys_id>f83ad9b547072110ff50249bd36d4329</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tasks - Incidents</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_search_filter_f83ad9b547072110ff50249bd36d4329</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 08:17:12</sys_updated_on>
+    </sys_search_filter>
+</record_update>

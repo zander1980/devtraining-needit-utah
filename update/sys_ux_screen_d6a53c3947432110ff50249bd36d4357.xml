@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <app_config display_value="Service Operations Workspace">4d69d0ed73c4301045216238edf6a7ea</app_config>
+        <description/>
+        <event_mappings>[ ]</event_mappings>
+        <macroponent display_value="Template SNC">92a53c3947432110ff50249bd36d4351</macroponent>
+        <macroponent_config>{
+  "sysId" : "@data.gform.nowRecordFormBlob.sysId",
+  "table" : "@data.gform.nowRecordFormBlob.table",
+  "fields" : "@data.gform.nowRecordFormBlob.fields",
+  "refreshRequested" : "@state.templatesRefresh",
+  "label" : "",
+  "bare" : true,
+  "scrollable" : "y",
+  "headerLevel" : "1",
+  "interceptNotifications" : false,
+  "propagateNotifications" : true,
+  "views" : "",
+  "selectedTabIndex" : 0,
+  "notificationTrayDisplayed" : "false",
+  "notificationQueue" : "[]",
+  "mode" : "",
+  "headingOnlyVisibleToScreenReaders" : false
+}</macroponent_config>
+        <name>Template SNC</name>
+        <order>100</order>
+        <parent_macroponent display_value="Record sow">e305bcf147432110ff50249bd36d43b4</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition>parent.table!=sys_template^parent.table!=cmdb_ci_outage^parent.table!=change_request^parent.table!=sn_occ_custom_alert^parent.table!=sn_occ_log_viewer_search</screen_condition>
+        <screen_type display_value="Templates">86a53c3947432110ff50249bd36d4332</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 05:37:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d6a53c3947432110ff50249bd36d4357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Template SNC</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_screen_d6a53c3947432110ff50249bd36d4357</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 05:37:33</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=d6a53c3947432110ff50249bd36d4357"/>
+</record_update>

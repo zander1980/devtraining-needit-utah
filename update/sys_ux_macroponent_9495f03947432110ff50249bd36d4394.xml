@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition>[ {
+  "elementId" : "viewport_ukx",
+  "elementLabel" : "Viewport 1",
+  "propertyValues" : {
+    "dynamicTabData" : ""
+  },
+  "eventMappings" : [ ],
+  "slot" : "Main",
+  "definition" : {
+    "id" : "MACROPONENT_VIEWPORT_HEADLESS",
+    "type" : "MACROPONENT_VIEWPORT_HEADLESS"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "isHero" : false,
+  "extensionPoints" : [ ],
+  "isNonDestructive" : false,
+  "items" : [ ],
+  "styles" : { }
+} ]</composition>
+        <da_relay_models/>
+        <data>[ {
+  "cachePolicy" : null,
+  "definition" : {
+    "id" : "84ac0df353211010cbc2ddeeff7b12a6",
+    "type" : "COMPOSITE"
+  },
+  "dependencies" : { },
+  "elementId" : "lp_user",
+  "elementLabel" : "Look Up User",
+  "eventMappings" : [ ],
+  "inputValues" : {
+    "userSysId" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "userSysId" ],
+        "category" : "props"
+      }
+    }
+  },
+  "readEvaluationMode" : "EAGER"
+}, {
+  "cachePolicy" : null,
+  "definition" : {
+    "id" : "7c174090539230109d03ddeeff7b1280",
+    "type" : "TRANSFORM"
+  },
+  "dependencies" : { },
+  "elementId" : "associate_to_interaction_transform",
+  "elementLabel" : "Associate To Interaction Transform",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
+} ]</data>
+        <description/>
+        <dispatched_events>608a2750535230109d03ddeeff7b12c5</dispatched_events>
+        <ext_controller_dep/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
+        <handled_events>2fb5ef44531230109d03ddeeff7b124c,866bdf44531230109d03ddeeff7b1260,d176635a53a030109d03ddeeff7b1219</handled_events>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings>{
+  "MACROPONENT_PROPERTY_CHANGED" : [ {
+    "broker" : null,
+    "clientScript" : {
+      "sysId" : "a895f03947432110ff50249bd36d43c9"
+    },
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : null,
+    "operation" : null,
+    "targetId" : "ckrdgsrbbyaaaaffffddhhhsjgggmycczx",
+    "type" : "CLIENT_SCRIPT"
+  } ],
+  "sn_sow_interaction.RENDER_RELATED_RECORD" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "sn_uxf.MACROPONENT_VIEWPORT_LOAD_REQUESTED",
+      "payload" : {
+        "type" : "CLIENT_TRANSFORM_SCRIPT",
+        "script" : {
+          "apiVersion" : "1.0.0",
+          "controllerElementId" : null,
+          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tviewportElementId: \"viewport_ukx\",\n\t\troute: \"related-record\",\n\t\tfields: {\n\t\t\ttable: api.context.props.table,\n\t\t\tsysId: api.context.props.recordSysId\n\t\t},\n\t\tparams: {\n\t\t\tbackButtonLabel: \"Back\"\n\t\t}\n\t};\n}",
+          "scriptSysId" : null,
+          "target" : null
+        }
+      },
+      "sysId" : "f49aa75023071010b1e3c50947bf65de"
+    },
+    "operation" : null,
+    "targetId" : "ckssviimefaaaacchhddhiiddddmiiagfhhh",
+    "type" : "EVENT"
+  } ],
+  "sn_sow_interaction.ASSOCIATE_RECORD" : [ {
+    "broker" : null,
+    "clientScript" : {
+      "sysId" : "ac95f03947432110ff50249bd36d43cd"
+    },
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : null,
+    "operation" : null,
+    "targetId" : "cksswxwrcaaaaggiiddhiiddhheeddxfwpa",
+    "type" : "CLIENT_SCRIPT"
+  } ],
+  "MACROPONENT_READY" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "sn_uxf.MACROPONENT_VIEWPORT_LOAD_REQUESTED",
+      "payload" : {
+        "type" : "CLIENT_TRANSFORM_SCRIPT",
+        "script" : {
+          "apiVersion" : "1.0.0",
+          "controllerElementId" : null,
+          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tviewportElementId: 'viewport_ukx',\n\t\troute: 'req-info',\n\t\tfields: null,\n\t\tparams: null\n\t};\n}",
+          "scriptSysId" : null,
+          "target" : null
+        }
+      },
+      "sysId" : "f49aa75023071010b1e3c50947bf65de"
+    },
+    "operation" : null,
+    "targetId" : "ckpmlpafgaaaaddfddghhyeejjaaxccggggjj",
+    "type" : "EVENT"
+  }, {
+    "broker" : null,
+    "clientScript" : {
+      "sysId" : "a895f03947432110ff50249bd36d43c9"
+    },
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : null,
+    "operation" : null,
+    "targetId" : "ckrdgskriaaaaffddddhhhsoiiccotnbbn",
+    "type" : "CLIENT_SCRIPT"
+  } ],
+  "sn_sow_interaction.RENDER_REQUESTOR_HOME" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "sn_uxf.MACROPONENT_VIEWPORT_LOAD_REQUESTED",
+      "payload" : {
+        "type" : "CLIENT_TRANSFORM_SCRIPT",
+        "script" : {
+          "apiVersion" : "1.0.0",
+          "controllerElementId" : null,
+          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n* @param {any} params.imports\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tviewportElementId: 'viewport_ukx',\n\t\troute: 'req-info',\n\t\tfields: null,\n\t\tparams: null\n\t};\n}",
+          "scriptSysId" : null,
+          "target" : null
+        }
+      },
+      "sysId" : "f49aa75023071010b1e3c50947bf65de"
+    },
+    "operation" : null,
+    "targetId" : "ckpobjcjjlaaaaddiiddghhsssglsrbbf",
+    "type" : "EVENT"
+  } ]
+}</internal_event_mappings>
+        <layout>{
+  "default" : {
+    "children" : null,
+    "isInline" : null,
+    "items" : [{"slotName":"Main","rules":{"flex":"1"},"styles":{"display":"flex","flex-direction":"column","background":"RGB(var(--now-color_surface--brand-1))","height":"auto"}}],
+    "root" : null,
+    "rules" : {"flex-flow":"row nowrap","align-items":"stretch","min-height":"400px","height":"100%","background":"RGB(var(--now-color_surface--brand-1))"},
+    "styles" : null,
+    "templateId" : "28bde4cd53431010e6bcddeeff7b12cc",
+    "type" : "flex"
+  }
+}</layout>
+        <macroponent_dependencies/>
+        <name>Requestor Info</name>
+        <output_prop_mapping/>
+        <props>[ {
+  "name" : "relatedLists",
+  "label" : "relatedLists",
+  "fieldType" : "json",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : "",
+  "readOnly" : false,
+  "selectable" : false,
+  "disabled" : false
+}, {
+  "name" : "shortDescription",
+  "label" : "shortDescription",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : "",
+  "readOnly" : false,
+  "selectable" : false,
+  "disabled" : false
+}, {
+  "name" : "table",
+  "label" : "Table",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : "",
+  "readOnly" : false,
+  "selectable" : false,
+  "disabled" : false
+}, {
+  "name" : "recordSysId",
+  "label" : "recordSysId",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : "",
+  "readOnly" : false,
+  "selectable" : false,
+  "disabled" : false
+}, {
+  "name" : "userSysId",
+  "label" : "userSysId",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : "",
+  "readOnly" : false,
+  "selectable" : false,
+  "disabled" : false
+} ]</props>
+        <required_translations>[ ]</required_translations>
+        <root_component/>
+        <root_component_config>{ }</root_component_config>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_properties>[ {
+  "name" : "userSysId",
+  "label" : "userSysId",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : "62826bf03710200044e0bfc8bcbe5df1"
+  }
+}, {
+  "name" : "payloadObject",
+  "label" : "payloadObject",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : { }
+  }
+}, {
+  "name" : "usersInteractionRelatedListItemSysId",
+  "label" : "usersInteractionRelatedListItemSysId",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : "c954ccb33b501300a0bd8cd834efc4b7"
+  }
+}, {
+  "name" : "relatedListItemIndex",
+  "label" : "relatedListItemIndex",
+  "fieldType" : "number",
+  "valueType" : "number",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : -1
+  }
+} ]</state_properties>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 05:37:09</sys_created_on>
+        <sys_id>9495f03947432110ff50249bd36d4394</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Requestor Info</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_macroponent_9495f03947432110ff50249bd36d4394</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 05:37:09</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_translated_text action="delete_multiple" query="documentkey=9495f03947432110ff50249bd36d4394"/>
+</record_update>

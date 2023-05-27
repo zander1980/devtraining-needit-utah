@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="On-Call Shift Details">6255bcb547432110ff50249bd36d43a7</macroponent>
+        <name>GetOnCallMembers</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    let rosters = [];
+    api.setState('hideLoader', true);
+    
+    let managerDetails = {};
+
+    if (api.data.oncall_escalations.output && api.data.oncall_escalations.output.result) {
+        const _group = api.data.oncall_escalations.output.result.groupOnCallMembers[0];
+        if (_group && _group.rota && _group.rota.rosters) {
+            _group.rota.rosters.forEach(function(roster) {
+                if (roster && roster.member && roster.member.user && roster.member.user.sys_id) {
+                    let isManager = false;
+                    if (_group.manager.indexOf(roster.member.user.sys_id) !== -1)
+                        isManager = true;
+                    roster.member.isManager = isManager;
+                    roster.member.user.displayName = roster.member.user.name;
+                    rosters.push(roster);
+                }
+            });
+        }
+        if (_group && _group.rota)
+            api.setState('preferedFormatDate', {...api.data.oncall_escalations.output.result.curRotaDetails.formattedDateTime});
+    
+        const groupDetails = api.data.oncall_escalations.output.result.groupDetails;
+        managerDetails = {
+            name: "Manager",
+            member: {
+                user: {...groupDetails.manager.managerDetails, displayName: groupDetails.manager.managerDetails.name}
+            }
+        };
+    }
+
+    api.setState("managerDetails", managerDetails);
+    api.setState('isCurrentTimeShift', api.data.oncall_escalations.output.result.curRotaDetails.isCurrentTimeShift);
+    api.setState('rosters', rosters);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 05:36:19</sys_created_on>
+        <sys_id>446530f547432110ff50249bd36d43ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetOnCallMembers</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_client_script_446530f547432110ff50249bd36d43ac</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 05:36:19</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

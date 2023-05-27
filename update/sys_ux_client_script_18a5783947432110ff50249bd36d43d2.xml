@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="req info">9795383947432110ff50249bd36d431a</macroponent>
+        <name>Update State Param On Task Agg Query</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : "",
+  "message" : "{0}'s recent records",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "{0} has {1} {2}, {3} {4}, {5} {6} and {7} {8} that are created in last 30 days",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "{0} has {1} {2} that is created in last 30 days",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "There are no recent records for {0}",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "{0} has {1} {2}, {3} {4} and {5} {6} that are created in last 30 days",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "{0} has {1} {2} and {3} {4} that are created in last 30 days",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "{0} has {1} {2} that are created in last 30 days",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    helpers.translate("{0}'s recent records", api.data.lp_record.result.first_name.displayValue).then((val) => {
+        api.setState('activeRecordsHeader', val);
+    });
+
+    var response = [];
+    var aggregationResult = api.data.transform_task_aggregation_response.output;
+    if (aggregationResult && aggregationResult.data) {
+        var userName = api.data.lp_record.result.first_name.displayValue;
+        var arr = aggregationResult.data.GlideAggregate_Query;
+
+        api.setState('hasRecentTasks', true);
+        if (arr.length === 1) {
+            if (arr[0].count == 1) {
+                helpers.translate('{0} has {1} {2} that is created in last 30 days', userName, arr[0].count, arr[0].groupBy[arr[0].groupBy.length - 1].plural).then((val) => {
+                    api.setState('responseString', val);
+                });
+            } else {
+                helpers.translate('{0} has {1} {2} that are created in last 30 days', userName, arr[0].count, arr[0].groupBy[arr[0].groupBy.length - 1].plural).then((val) => {
+                    api.setState('responseString', val);
+                });
+            }
+        } else if (arr.length === 2) {
+            helpers.translate('{0} has {1} {2} and {3} {4} that are created in last 30 days', userName, arr[0].count, arr[0].groupBy[arr[0].groupBy.length - 1].plural,
+                arr[1].count, arr[1].groupBy[arr[1].groupBy.length - 1].plural).then((val) => {
+                api.setState('responseString', val);
+            });
+        } else if (arr.length === 3) {
+            helpers.translate('{0} has {1} {2}, {3} {4} and {5} {6} that are created in last 30 days', userName, arr[0].count, arr[0].groupBy[arr[0].groupBy.length - 1].plural,
+                arr[1].count, arr[1].groupBy[arr[1].groupBy.length - 1].plural,
+                arr[2].count, arr[2].groupBy[arr[2].groupBy.length - 1].plural).then((val) => {
+                api.setState('responseString', val);
+            });
+        } else if (arr.length === 4) {
+            helpers.translate('{0} has {1} {2}, {3} {4}, {5} {6} and {7} {8} that are created in last 30 days', userName, arr[0].count, arr[0].groupBy[arr[0].groupBy.length - 1].plural,
+                arr[1].count, arr[1].groupBy[arr[1].groupBy.length - 1].plural,
+                arr[2].count, arr[2].groupBy[arr[2].groupBy.length - 1].plural,
+                arr[3].count, arr[3].groupBy[arr[3].groupBy.length - 1].plural).then((val) => {
+                api.setState('responseString', val);
+            });
+        } else {
+            helpers.translate('There are no recent records for {0}', userName).then((val) => {
+                api.setState('responseString', val);
+            });
+            api.setState('hasRecentTasks', false);
+        }
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 05:37:25</sys_created_on>
+        <sys_id>18a5783947432110ff50249bd36d43d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update State Param On Task Agg Query</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_client_script_18a5783947432110ff50249bd36d43d2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 05:37:25</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

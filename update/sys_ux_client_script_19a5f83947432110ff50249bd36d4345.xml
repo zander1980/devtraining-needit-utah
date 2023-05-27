@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="req info">9795383947432110ff50249bd36d431a</macroponent>
+        <name>Format Data</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+
+    var getIcon = function(type) {
+        switch (type.toUpperCase()) {
+            case 'CHAT':
+                return 'chat-outline';
+            case 'PHONE':
+                return 'phone-outline';
+            case 'MESSAGING':
+               return 'cellphone-outline';
+            case 'MICROSOFT_TEAMS_CHAT':
+               return 'microsoft-teams-outline';
+            default:
+                return 'ongoing-outline';
+        }
+    };
+
+    var interactionsList = [];
+    for (var i = 0; i < api.data.look_up_records.results.length; i++) {
+        var iter = api.data.look_up_records.results[i];
+       if (iter.short_description.displayValue !== '')
+            var cardBody = iter.sys_updated_on.displayValue + ' • ' + iter.short_description.displayValue;
+       else
+           var cardBody = iter.sys_updated_on.displayValue;
+        var interaction = {
+            number: iter.number.displayValue,
+            sysId: iter._row_data.uniqueValue,
+            shortDescription: iter.short_description.displayValue,
+            updatedOn: iter.sys_updated_on.displayValue,
+            type: iter.type.displayValue,
+            typeIcon: getIcon(iter.type.value),
+            cardBodyText: cardBody,
+            typeValue: iter.type.value
+        };
+        interactionsList.push(interaction);
+    }
+    
+    api.setState('interactionsList', interactionsList);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 05:37:29</sys_created_on>
+        <sys_id>19a5f83947432110ff50249bd36d4345</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Format Data</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_client_script_19a5f83947432110ff50249bd36d4345</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 05:37:29</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

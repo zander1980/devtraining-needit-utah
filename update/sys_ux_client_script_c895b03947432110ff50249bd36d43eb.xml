@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes>7afbcec4533330102d05ddeeff7b1232</includes>
+        <macroponent display_value="Form Modal">df85b03947432110ff50249bd36d4307</macroponent>
+        <name>Process Form Data</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    
+    const modalPath = api.context.props.modalPath;
+    let sowFormModal = imports["sn_sow_itsm_common.SOWFormModal"]();
+
+    var fields = api.state.fields;
+    const changes = api.state.serializedChanges;
+    const requiredFields = api.state.requiredFields;
+    const eventName = event.name;
+    
+    const { displayValue, fieldName, value } = event.payload;
+    const fieldType = fields[fieldName].type;
+
+    const getObjectIndex = (obj, name) => {
+        const len = obj.length;
+        if (len == 0) {
+            return -1;
+        }
+        return obj.findIndex((ele) => ele.name == name);
+    };
+
+    const setMandatory = (fieldName, value) => {
+        if (fields[fieldName]) {
+            fields[fieldName]['mandatory'] = value;
+        }
+    };
+
+    const serializedChanges = () => {
+        var serializedChangesOld = [];
+        if (changes)
+            serializedChangesOld = JSON.parse(changes);
+
+        const index = getObjectIndex(serializedChangesOld, fieldName);
+
+        if (index == -1) {
+            serializedChangesOld.push({ ...fields[fieldName],
+                displayValue,
+                value
+            });
+        } else {
+            serializedChangesOld[index] = { ...fields[fieldName],
+                displayValue,
+                value
+            };
+        }
+        api.setState('serializedChanges', JSON.stringify(serializedChangesOld));
+    };
+
+    const setValueObj = (displayValue, fieldName, value, type) => {
+        var field = {};
+        field.value = value;
+
+        if (type === 'glide_list' && Array.isArray(displayValue)) {
+            field.display_value_list = displayValue;
+            field.displayValue = displayValue.join(', ');
+        } else {
+            field.displayValue = displayValue || value;
+        }
+        return field;
+    };
+
+    const setValue = () => {
+        var fieldUpdated = setValueObj(displayValue, fieldName, value, fieldType);
+        fields = { ...fields,
+            [fieldName]: { ...fields[fieldName],
+                ...fieldUpdated
+            }
+        };
+        let processField = sowFormModal.getProcessFields(modalPath);
+        if(typeof processField == "function" && fieldName === "assignment_group" && fields.assigned_to.value && fields.assignment_group.value) {
+            var userhasGroupQuery = "user=" +fields.assigned_to.value+ "^group="+ fields.assignment_group.value;
+            api.setState('userGroupCheck', userhasGroupQuery);
+            
+        }
+        else if (typeof processField == "function") {
+                api.setState('userGroupCheck', null);
+                processField(fields, fieldName, value, displayValue, api);
+        }
+        api.setState("fields", { ...fields,
+            [fieldName]: { ...fields[fieldName],
+                ...fieldUpdated
+            }
+        });
+    };
+
+    switch (eventName) {
+        case 'NOW_RECORD_FORM_SECTION_COLUMN_LAYOUT#SET_VALUE':
+            setValue();
+            serializedChanges();
+            break;
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 05:37:07</sys_created_on>
+        <sys_id>c895b03947432110ff50249bd36d43eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Process Form Data</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_client_script_c895b03947432110ff50249bd36d43eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 05:37:07</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

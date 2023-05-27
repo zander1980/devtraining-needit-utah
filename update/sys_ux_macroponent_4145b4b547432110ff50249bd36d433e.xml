@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition>[ {
+  "elementId" : "4ee9daa3532230100999ddeeff7b128a_Main",
+  "elementLabel" : "Main",
+  "propertyValues" : {
+    "ariaRegionHeadingLevel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1"
+    },
+    "ariaRegionName" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "",
+        "comment" : ""
+      }
+    },
+    "includeAriaHeading" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "type" : {
+      "type" : "JSON_LITERAL",
+      "value" : "section"
+    },
+    "ariaRole" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : null,
+  "definition" : {
+    "id" : "d356d14b6e293a3020a244b63d278d8f",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : {
+    "composition" : [ {
+      "elementId" : "container_1",
+      "elementLabel" : "Recommended groups container",
+      "propertyValues" : {
+        "ariaRegionHeadingLevel" : {
+          "type" : "JSON_LITERAL",
+          "value" : "1"
+        },
+        "ariaRegionName" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "",
+            "comment" : ""
+          }
+        },
+        "includeAriaHeading" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "type" : {
+          "type" : "JSON_LITERAL",
+          "value" : "section"
+        },
+        "ariaRole" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : null,
+      "definition" : {
+        "id" : "d356d14b6e293a3020a244b63d278d8f",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : {
+        "composition" : [ {
+          "elementId" : "recommended_groups",
+          "elementLabel" : "Recommended Groups",
+          "propertyValues" : { },
+          "eventMappings" : [ ],
+          "slot" : null,
+          "definition" : {
+            "id" : "",
+            "type" : "REPEATER"
+          },
+          "overrides" : {
+            "composition" : [ {
+              "elementId" : "conditional_groups",
+              "elementLabel" : "Conditional Groups",
+              "propertyValues" : { },
+              "eventMappings" : [ ],
+              "slot" : null,
+              "definition" : {
+                "id" : "",
+                "type" : "CONDITIONAL"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "JSON_LITERAL",
+                "value" : false
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "conditionals" : [ {
+                "condition" : {
+                  "type" : "REPEATER_ITEM_BINDING",
+                  "binding" : {
+                    "address" : [ "group", "active" ],
+                    "category" : "value"
+                  }
+                },
+                "item" : {
+                  "elementId" : "container_2",
+                  "elementLabel" : "Container 2",
+                  "propertyValues" : {
+                    "ariaRegionHeadingLevel" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "1"
+                    },
+                    "ariaRegionName" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : ""
+                    },
+                    "includeAriaHeading" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "type" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "section"
+                    },
+                    "ariaRole" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : ""
+                    }
+                  },
+                  "eventMappings" : [ ],
+                  "slot" : null,
+                  "definition" : {
+                    "id" : "d356d14b6e293a3020a244b63d278d8f",
+                    "type" : "MACROPONENT"
+                  },
+                  "overrides" : {
+                    "composition" : [ {
+                      "elementId" : "highlighted_value_1",
+                      "elementLabel" : "Recommended by label",
+                      "propertyValues" : {
+                        "color" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "info"
+                        },
+                        "variant" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "tertiary"
+                        },
+                        "icon" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "lightbulb-outline"
+                        },
+                        "label" : {
+                          "type" : "REPEATER_ITEM_BINDING",
+                          "binding" : {
+                            "address" : [ "recommendedLabel" ],
+                            "category" : "value"
+                          }
+                        }
+                      },
+                      "eventMappings" : [ ],
+                      "slot" : null,
+                      "definition" : {
+                        "id" : "7fdccde954f753ae89139c6c24551be5",
+                        "type" : "MACROPONENT"
+                      },
+                      "overrides" : null,
+                      "isHidden" : {
+                        "type" : "JSON_LITERAL",
+                        "value" : null
+                      },
+                      "isHero" : false,
+                      "extensionPoints" : [ ],
+                      "isNonDestructive" : false,
+                      "items" : [ ],
+                      "styles" : {
+                        "max-width" : "fit-content"
+                      }
+                    }, {
+                      "elementId" : "heading_1",
+                      "elementLabel" : "Group Macroponent",
+                      "propertyValues" : {
+                        "useUserDatetimeFormat" : {
+                          "type" : "CONTEXT_BINDING",
+                          "binding" : {
+                            "address" : [ "userUserDateTimeFormat" ],
+                            "category" : "props"
+                          }
+                        },
+                        "bare" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : true
+                        },
+                        "group" : {
+                          "type" : "REPEATER_ITEM_BINDING",
+                          "binding" : {
+                            "address" : [ "group" ],
+                            "category" : "value"
+                          }
+                        }
+                      },
+                      "eventMappings" : [ {
+                        "eventMappingId" : "ckwdexjsuaabbffiddeggwniykhhugj",
+                        "isConfiguration" : false,
+                        "offRowStorageId" : null,
+                        "sourceEventApiName" : "sn_sow_on_call.ROSTER_CONTACT",
+                        "sourceEventCorrelationId" : null,
+                        "sourceEventDefinition" : {
+                          "apiName" : "sn_sow_on_call.ROSTER_CONTACT",
+                          "id" : null,
+                          "type" : "UXEVENT"
+                        },
+                        "sourceEventSysId" : null,
+                        "targets" : [ {
+                          "broker" : null,
+                          "clientScript" : null,
+                          "conditional" : null,
+                          "declarativeAction" : null,
+                          "event" : {
+                            "apiName" : "sn_sow_on_call.ROSTER_CONTACT",
+                            "payload" : {
+                              "type" : "MAP_CONTAINER",
+                              "container" : {
+                                "roster" : {
+                                  "type" : "EVENT_PAYLOAD_BINDING",
+                                  "binding" : {
+                                    "address" : [ "roster" ]
+                                  }
+                                }
+                              }
+                            },
+                            "sysId" : "67c9b4d0533230100999ddeeff7b12b7"
+                          },
+                          "operation" : null,
+                          "targetId" : "ckwdexjsuaabbffjddeggwzlotdvyl",
+                          "type" : "EVENT"
+                        } ]
+                      }, {
+                        "eventMappingId" : "ckwccyfusffaaiivfddeggwvihambmq",
+                        "isConfiguration" : false,
+                        "offRowStorageId" : null,
+                        "sourceEventApiName" : "sn_sow_on_call.ONCALL_SHIFT_DETAILS",
+                        "sourceEventCorrelationId" : null,
+                        "sourceEventDefinition" : {
+                          "apiName" : "sn_sow_on_call.ONCALL_SHIFT_DETAILS",
+                          "id" : null,
+                          "type" : "UXEVENT"
+                        },
+                        "sourceEventSysId" : null,
+                        "targets" : [ {
+                          "broker" : null,
+                          "clientScript" : {
+                            "sysId" : "c0028ab6733230108ef62d2b04f6a738"
+                          },
+                          "conditional" : null,
+                          "declarativeAction" : null,
+                          "event" : null,
+                          "operation" : null,
+                          "targetId" : "ckwccyfusffaaiivgddeggwwooddvddgs",
+                          "type" : "CLIENT_SCRIPT"
+                        } ]
+                      } ],
+                      "slot" : null,
+                      "definition" : {
+                        "id" : "df0c4c7f53b13010610bddeeff7b12c5",
+                        "type" : "MACROPONENT"
+                      },
+                      "overrides" : null,
+                      "isHidden" : {
+                        "type" : "JSON_LITERAL",
+                        "value" : null
+                      },
+                      "isHero" : false,
+                      "extensionPoints" : [ ],
+                      "isNonDestructive" : false,
+                      "items" : [ ],
+                      "styles" : {
+                        "margin-top" : "var(--now-static-space--xs)"
+                      }
+                    } ],
+                    "layout" : {
+                      "default" : {
+                        "children" : null,
+                        "isInline" : null,
+                        "items" : [{"element_id":"highlighted_value_1","styles":{}},{"element_id":"heading_1","styles":{}}],
+                        "root" : null,
+                        "rules" : null,
+                        "styles" : {"flex-direction":"column"},
+                        "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+                        "type" : "flex"
+                      },
+                      "version" : "3.0.0"
+                    }
+                  },
+                  "isHidden" : {
+                    "type" : "JSON_LITERAL",
+                    "value" : false
+                  },
+                  "isHero" : false,
+                  "extensionPoints" : [ ],
+                  "isNonDestructive" : false,
+                  "items" : [ ],
+                  "styles" : { }
+                }
+              }, {
+                "condition" : null,
+                "item" : {
+                  "elementId" : "container_3",
+                  "elementLabel" : "Container 3",
+                  "propertyValues" : {
+                    "ariaRegionHeadingLevel" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "1"
+                    },
+                    "ariaRegionName" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : ""
+                    },
+                    "includeAriaHeading" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "type" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "section"
+                    },
+                    "ariaRole" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : ""
+                    }
+                  },
+                  "eventMappings" : [ ],
+                  "slot" : null,
+                  "definition" : {
+                    "id" : "d356d14b6e293a3020a244b63d278d8f",
+                    "type" : "MACROPONENT"
+                  },
+                  "overrides" : {
+                    "composition" : [ {
+                      "elementId" : "highlighted_value_2",
+                      "elementLabel" : "Recommended by label",
+                      "propertyValues" : {
+                        "color" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "info"
+                        },
+                        "variant" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "tertiary"
+                        },
+                        "icon" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "lightbulb-outline"
+                        },
+                        "label" : {
+                          "type" : "REPEATER_ITEM_BINDING",
+                          "binding" : {
+                            "address" : [ "recommendedLabel" ],
+                            "category" : "value"
+                          }
+                        }
+                      },
+                      "eventMappings" : [ ],
+                      "slot" : null,
+                      "definition" : {
+                        "id" : "7fdccde954f753ae89139c6c24551be5",
+                        "type" : "MACROPONENT"
+                      },
+                      "overrides" : null,
+                      "isHidden" : {
+                        "type" : "JSON_LITERAL",
+                        "value" : null
+                      },
+                      "isHero" : false,
+                      "extensionPoints" : [ ],
+                      "isNonDestructive" : false,
+                      "items" : [ ],
+                      "styles" : {
+                        "max-width" : "fit-content"
+                      }
+                    }, {
+                      "elementId" : "heading_2",
+                      "elementLabel" : "Heading 2",
+                      "propertyValues" : {
+                        "hasNoMargin" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : false
+                        },
+                        "level" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "1"
+                        },
+                        "variant" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "header-primary"
+                        },
+                        "wontWrap" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "TRANSLATION_LITERAL",
+                          "value" : {
+                            "code" : null,
+                            "message" : "",
+                            "comment" : ""
+                          }
+                        },
+                        "bare" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : true
+                        },
+                        "group" : {
+                          "type" : "REPEATER_ITEM_BINDING",
+                          "binding" : {
+                            "address" : [ "group" ],
+                            "category" : "value"
+                          }
+                        }
+                      },
+                      "eventMappings" : [ {
+                        "eventMappingId" : "ckxftbbodoaabbffbddeggveeeefmbboyjj",
+                        "isConfiguration" : false,
+                        "offRowStorageId" : null,
+                        "sourceEventApiName" : "sn_sow_on_call.NAVIGATE_SHIFT_DETAILS",
+                        "sourceEventCorrelationId" : null,
+                        "sourceEventDefinition" : {
+                          "apiName" : "sn_sow_on_call.NAVIGATE_SHIFT_DETAILS",
+                          "id" : null,
+                          "type" : "UXEVENT"
+                        },
+                        "sourceEventSysId" : null,
+                        "targets" : [ {
+                          "broker" : null,
+                          "clientScript" : {
+                            "sysId" : "c0028ab6733230108ef62d2b04f6a738"
+                          },
+                          "conditional" : null,
+                          "declarativeAction" : null,
+                          "event" : null,
+                          "operation" : null,
+                          "targetId" : "ckxftbbodoaabbffcddeggvyvaasqugb",
+                          "type" : "CLIENT_SCRIPT"
+                        } ]
+                      } ],
+                      "slot" : null,
+                      "definition" : {
+                        "id" : "fba282c753363010610bddeeff7b1209",
+                        "type" : "MACROPONENT"
+                      },
+                      "overrides" : null,
+                      "isHidden" : {
+                        "type" : "JSON_LITERAL",
+                        "value" : null
+                      },
+                      "isHero" : false,
+                      "extensionPoints" : [ ],
+                      "isNonDestructive" : false,
+                      "items" : [ ],
+                      "styles" : { }
+                    } ],
+                    "layout" : {
+                      "default" : {
+                        "children" : null,
+                        "isInline" : null,
+                        "items" : [{"element_id":"highlighted_value_2","styles":{}},{"element_id":"heading_2","styles":{}}],
+                        "root" : null,
+                        "rules" : null,
+                        "styles" : {"flex-direction":"column"},
+                        "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+                        "type" : "flex"
+                      },
+                      "version" : "3.0.0"
+                    }
+                  },
+                  "isHidden" : {
+                    "type" : "JSON_LITERAL",
+                    "value" : null
+                  },
+                  "isHero" : false,
+                  "extensionPoints" : [ ],
+                  "isNonDestructive" : false,
+                  "items" : [ ],
+                  "styles" : {
+                    "width" : "100%"
+                  }
+                }
+              } ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            } ],
+            "layout" : null
+          },
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : null
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "repeatWith" : {
+            "type" : "STATE_BINDING",
+            "binding" : {
+              "address" : [ "onCallDeepData" ]
+            }
+          },
+          "styles" : { }
+        }, {
+          "elementId" : "empty_state_1",
+          "elementLabel" : "Empty recommended groups",
+          "propertyValues" : {
+            "heading" : {
+              "type" : "CLIENT_TRANSFORM_SCRIPT",
+              "script" : {
+                "apiVersion" : "2.0.0",
+                "controllerElementId" : null,
+                "inlineScript" : null,
+                "scriptSysId" : "8545b4b547432110ff50249bd36d4340",
+                "target" : null
+              }
+            },
+            "illustration" : {
+              "type" : "JSON_LITERAL",
+              "value" : "add-data"
+            },
+            "alignment" : {
+              "type" : "JSON_LITERAL",
+              "value" : "vertical-centered"
+            },
+            "actions" : {
+              "type" : "CLIENT_TRANSFORM_SCRIPT",
+              "script" : {
+                "apiVersion" : "2.0.0",
+                "controllerElementId" : null,
+                "inlineScript" : null,
+                "scriptSysId" : "c945b4b547432110ff50249bd36d4344",
+                "target" : null
+              }
+            },
+            "content" : {
+              "type" : "CLIENT_TRANSFORM_SCRIPT",
+              "script" : {
+                "apiVersion" : "2.0.0",
+                "controllerElementId" : null,
+                "inlineScript" : null,
+                "scriptSysId" : "4145b4b547432110ff50249bd36d434a",
+                "target" : null
+              }
+            }
+          },
+          "eventMappings" : [ {
+            "eventMappingId" : "ckybbihhqffjaabbiigddfggupccjteeaccb",
+            "isConfiguration" : false,
+            "offRowStorageId" : null,
+            "sourceEventApiName" : "sn_template_messag.NOW_TEMPLATE_MESSAGE_EMPTY_STATE#ACTION_CLICKED",
+            "sourceEventCorrelationId" : null,
+            "sourceEventDefinition" : {
+              "apiName" : "sn_template_messag.NOW_TEMPLATE_MESSAGE_EMPTY_STATE#ACTION_CLICKED",
+              "id" : null,
+              "type" : "UXEVENT"
+            },
+            "sourceEventSysId" : null,
+            "targets" : [ {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "sn_sow_on_call.RENDER_ON-CALL_GROUPS_SEARCH",
+                "payload" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : { }
+                },
+                "sysId" : "a2edb14553c40110a487ddeeff7b129f"
+              },
+              "operation" : null,
+              "targetId" : "ckybbihhqffjaabbiihddfggupgrzgbwk",
+              "type" : "EVENT"
+            } ]
+          } ],
+          "slot" : null,
+          "definition" : {
+            "id" : "6f51fcc407363e5a52ac464315713ee9",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : null,
+          "isHidden" : {
+            "type" : "CLIENT_TRANSFORM_SCRIPT",
+            "script" : {
+              "apiVersion" : "2.0.0",
+              "controllerElementId" : null,
+              "inlineScript" : null,
+              "scriptSysId" : "4945b4b547432110ff50249bd36d4350",
+              "target" : null
+            }
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : {
+            "margin" : "50% 0"
+          }
+        } ],
+        "layout" : {
+          "default" : {
+            "children" : null,
+            "isInline" : null,
+            "items" : [{"element_id":"recommended_groups","styles":{}},{"element_id":"empty_state_1","styles":{}}],
+            "root" : null,
+            "rules" : null,
+            "styles" : {"flex-direction":"column"},
+            "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+            "type" : "flex"
+          },
+          "version" : "3.0.0"
+        }
+      },
+      "isHidden" : {
+        "type" : "CLIENT_TRANSFORM_SCRIPT",
+        "script" : {
+          "apiVersion" : "2.0.0",
+          "controllerElementId" : null,
+          "inlineScript" : null,
+          "scriptSysId" : "c145b4b547432110ff50249bd36d4358",
+          "target" : null
+        }
+      },
+      "isHero" : false,
+      "extensionPoints" : [ ],
+      "isNonDestructive" : false,
+      "items" : [ ],
+      "styles" : {
+        "width" : "100%",
+        "min-height" : "400px"
+      }
+    }, {
+      "elementId" : "loader_1",
+      "elementLabel" : "Loader",
+      "propertyValues" : {
+        "size" : {
+          "type" : "JSON_LITERAL",
+          "value" : "lg"
+        },
+        "action" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "label" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : null,
+      "definition" : {
+        "id" : "dc87bcee22259d229390a8da7fb7b0b3",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "CLIENT_TRANSFORM_SCRIPT",
+        "script" : {
+          "apiVersion" : "2.0.0",
+          "controllerElementId" : null,
+          "inlineScript" : null,
+          "scriptSysId" : "cd45b4b547432110ff50249bd36d4360",
+          "target" : null
+        }
+      },
+      "isHero" : false,
+      "extensionPoints" : [ ],
+      "isNonDestructive" : false,
+      "items" : [ ],
+      "styles" : { }
+    } ],
+    "layout" : {
+      "default" : {
+        "children" : null,
+        "isInline" : null,
+        "items" : [{"element_id":"container_1","styles":{}},{"element_id":"loader_1","styles":{}},{"rules":{},"styles":{},"element_id":"recommended_groups"}],
+        "root" : null,
+        "rules" : {},
+        "styles" : {"flex-direction":"column","display":"flex","padding-bottom":"20px"},
+        "templateId" : null,
+        "type" : "flex"
+      },
+      "version" : "3.0.0"
+    }
+  },
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  },
+  "isHero" : false,
+  "extensionPoints" : [ ],
+  "isNonDestructive" : false,
+  "items" : [ ],
+  "styles" : { }
+} ]</composition>
+        <da_relay_models/>
+        <data>[ {
+  "cachePolicy" : null,
+  "definition" : {
+    "id" : "21b79a23532230100999ddeeff7b1226",
+    "type" : "REST"
+  },
+  "dependencies" : { },
+  "elementId" : "oncall_groups_by_id",
+  "elementLabel" : "On-call Groups by ID",
+  "eventMappings" : [ {
+    "eventMappingId" : "ckwggccplbeaabbggnddeggwkggawmrkaa",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "1145b4b547432110ff50249bd36d43e1"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "ckwggccpuxnaabbhheddeggwdboiihhtxc",
+      "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "propName" : "onCallLoading",
+            "value" : null
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "ckwfuhhrlzaabbaffddeggwccggddqiicchhq",
+      "type" : "EVENT"
+    } ]
+  } ],
+  "inputValues" : {
+    "date_time" : {
+      "type" : "STATE_BINDING",
+      "binding" : {
+        "address" : [ "onCallDateTime" ]
+      }
+    },
+    "group_ids" : {
+      "type" : "STATE_BINDING",
+      "binding" : {
+        "address" : [ "recommendedGroups" ]
+      }
+    }
+  },
+  "readEvaluationMode" : "EXPLICIT"
+}, {
+  "cachePolicy" : null,
+  "definition" : {
+    "id" : "4bcc4e76113f3010f877c8a826837470",
+    "type" : "REST"
+  },
+  "dependencies" : { },
+  "elementId" : "get_recommended_groups",
+  "elementLabel" : "Get recommended groups",
+  "eventMappings" : [ {
+    "eventMappingId" : "ckwfsvxjtaabbdffddeggwffjjccpijjfl",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "e945b4b547432110ff50249bd36d43fc"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "ckwfsvxjtaabbdggddeggwbxffyfcczh",
+      "type" : "CLIENT_SCRIPT"
+    } ]
+  } ],
+  "inputValues" : {
+    "record_sys_id" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "recordSysId" ],
+        "category" : "props"
+      }
+    },
+    "table" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "table" ],
+        "category" : "props"
+      }
+    },
+    "group_fields_watch_list" : {
+      "type" : "STATE_BINDING",
+      "binding" : {
+        "address" : [ "groupFieldValues" ]
+      }
+    }
+  },
+  "readEvaluationMode" : "EXPLICIT"
+} ]</data>
+        <description/>
+        <dispatched_events>6f4e57a953040110bf68ddeeff7b12d9,67c9b4d0533230100999ddeeff7b12b7,31066172733230108ef62d2b04f6a7a8,a2edb14553c40110a487ddeeff7b129f</dispatched_events>
+        <ext_controller_dep/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
+        <handled_events>456b782753100110bf68ddeeff7b12de</handled_events>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings>{
+  "MACROPONENT_PROPERTY_CHANGED" : [ {
+    "broker" : null,
+    "clientScript" : {
+      "sysId" : "9545b4b547432110ff50249bd36d43a2"
+    },
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : null,
+    "operation" : null,
+    "targetId" : "ckwnccucffpaabbkbbddeggwffdiircclkx",
+    "type" : "CLIENT_SCRIPT"
+  } ],
+  "sn_sow_on_call.RECOMMENDED_GROUPS_REFRESH" : [ {
+    "broker" : null,
+    "clientScript" : {
+      "sysId" : "1145b4b547432110ff50249bd36d43e1"
+    },
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : null,
+    "operation" : null,
+    "targetId" : "ckxffssihhcaaccbjccahhcclxceejeig",
+    "type" : "CLIENT_SCRIPT"
+  } ],
+  "MACROPONENT_READY" : [ {
+    "broker" : null,
+    "clientScript" : {
+      "sysId" : "9545b4b547432110ff50249bd36d43a2"
+    },
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : null,
+    "operation" : null,
+    "targetId" : "ckwlxjjaagccaabbggrddeggwgkfosiibg",
+    "type" : "CLIENT_SCRIPT"
+  } ]
+}</internal_event_mappings>
+        <layout>{
+  "default" : {
+    "children" : null,
+    "isInline" : null,
+    "items" : [{"rules":{},"styles":{"white-space":"break-spaces","flex":"1","width":"100%"},"element_id":"4ee9daa3532230100999ddeeff7b128a_Main"}],
+    "root" : null,
+    "rules" : null,
+    "styles" : {"display":"flex","align-items":"center","flex-flow":"column nowrap","min-height":"100%","height":"100%","overflow-y":"hidden","width":"100%"},
+    "templateId" : "28bde4cd53431010e6bcddeeff7b12cc",
+    "type" : "flex"
+  },
+  "version" : "3.0.0"
+}</layout>
+        <macroponent_dependencies/>
+        <name>On-Call Recommended</name>
+        <output_prop_mapping/>
+        <props>[ {
+  "name" : "onCallDateTime",
+  "label" : "Date Time",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : "",
+  "readOnly" : false,
+  "selectable" : false,
+  "disabled" : false
+}, {
+  "name" : "recordSysId",
+  "label" : "recordSysId",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : "",
+  "readOnly" : false,
+  "selectable" : false,
+  "disabled" : false
+}, {
+  "name" : "table",
+  "label" : "Table",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : "",
+  "readOnly" : false,
+  "selectable" : false,
+  "disabled" : false
+}, {
+  "name" : "recommendedGroupFields",
+  "label" : "recommendedGroupFields",
+  "fieldType" : "json",
+  "typeMetadata" : null,
+  "valueType" : "json",
+  "mandatory" : false,
+  "defaultValue" : null,
+  "description" : "",
+  "readOnly" : false,
+  "selectable" : false,
+  "disabled" : false
+}, {
+  "name" : "hideShiftsWithNoOnCall",
+  "label" : "hideShiftsWithNoOnCall",
+  "fieldType" : "boolean",
+  "typeMetadata" : null,
+  "valueType" : "boolean",
+  "mandatory" : false,
+  "defaultValue" : false,
+  "description" : "",
+  "readOnly" : false,
+  "selectable" : false,
+  "disabled" : false
+}, {
+  "name" : "userUserDateTimeFormat",
+  "label" : "userUserDateTimeFormat",
+  "fieldType" : "boolean",
+  "typeMetadata" : null,
+  "valueType" : "boolean",
+  "mandatory" : false,
+  "defaultValue" : false,
+  "description" : "",
+  "readOnly" : false,
+  "selectable" : false,
+  "disabled" : false
+} ]</props>
+        <required_translations>[ ]</required_translations>
+        <root_component/>
+        <root_component_config>{ }</root_component_config>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_properties>[ {
+  "name" : "onCallDeepData",
+  "label" : "onCallDeepData",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : [ ]
+  }
+}, {
+  "name" : "onCallFlatData",
+  "label" : "onCallFlatData",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : [ ]
+  }
+}, {
+  "name" : "recommendedGroups",
+  "label" : "recommendedGroups",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "onCallDateTime",
+  "label" : "onCallDateTime",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "onCallLoading",
+  "label" : "onCallLoading",
+  "fieldType" : "boolean",
+  "valueType" : "boolean",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
+  }
+}, {
+  "name" : "groupFieldValues",
+  "label" : "groupFieldValues",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : [ ]
+  }
+} ]</state_properties>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 05:35:50</sys_created_on>
+        <sys_id>4145b4b547432110ff50249bd36d433e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>On-Call Recommended</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_macroponent_4145b4b547432110ff50249bd36d433e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 05:35:52</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_translated_text action="delete_multiple" query="documentkey=4145b4b547432110ff50249bd36d433e"/>
+</record_update>

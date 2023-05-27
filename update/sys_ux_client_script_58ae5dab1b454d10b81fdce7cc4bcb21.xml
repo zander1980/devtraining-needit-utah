@@ -3,6 +3,7 @@
         <includes>58d17acf0b531010a8b1c96237673a68</includes>
         <macroponent display_value="Simple List">bf9e5dab1b454d10b81fdce7cc4bcb0e</macroponent>
         <name>Open record from simple list page</name>
+        <preset/>
         <required_translations>[ ]</required_translations>
         <script><![CDATA[function handler({
     api,
@@ -44,6 +45,7 @@
         <sys_update_name>sys_ux_client_script_58ae5dab1b454d10b81fdce7cc4bcb21</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-01-20 16:39:01</sys_updated_on>
+        <target/>
         <type>default</type>
     </sys_ux_client_script>
 </record_update>

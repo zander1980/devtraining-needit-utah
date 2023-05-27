@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes>7afbcec4533330102d05ddeeff7b1232</includes>
+        <macroponent display_value="Form Modal">df85b03947432110ff50249bd36d4307</macroponent>
+        <name>Initial Form Data</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : "",
+  "message" : "Cancel",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Resolve",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Assign",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Save",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+async function handler({api, event, helpers, imports}) {
+    const eventName = event.name;
+    const table = api.context.props.table;
+    const sysId = api.context.props.sysId;
+    const modalPath = api.context.props.modalPath;
+    let requiredFields = api.context.props.requiredFields;
+    let sowFormModal = imports["sn_sow_itsm_common.SOWFormModal"]();
+    const translations = {
+        "Resolve": await helpers.translate("Resolve"),
+        "Assign": await helpers.translate("Assign"),
+        "Save": await helpers.translate("Save"),
+        "Cancel": await helpers.translate("Cancel")
+    };
+    let fields;
+    if (!api.context.props.fields) {
+        api.setState("gform", {
+            table: table,
+            sysId: sysId
+        });
+    } else {
+        fields = JSON.parse(api.context.props.fields);
+    }
+
+    const getObjectIndex = (obj, name) => {
+        const len = obj.length;
+        if (len == 0) {
+            return -1;
+        }
+        return obj.findIndex((ele) => ele.name == name);
+    };
+
+    const getInitialData = () => {
+        if (!requiredFields) {
+            requiredFields = sowFormModal.getRequiredFields(modalPath);
+        }
+        let fieldMap = sowFormModal.getFieldMap(fields, requiredFields);
+        let sectionMap = sowFormModal.getSectionMap(requiredFields, modalPath);
+        let initializeFields = sowFormModal.getInitializeFields(modalPath);
+        if (typeof initializeFields == "function") {
+            initializeFields(fields);
+        }
+        api.setState('fields', fieldMap);
+        api.setState('section', sectionMap);
+        api.setState('requiredFields', requiredFields);
+    };
+
+    const updateLabel = () => {
+        let saveLabel = translations["Save"];
+        let cancelLabel = translations["Cancel"];
+        if (api.context.props.saveLabel) {
+            saveLabel = translations[api.context.props.saveLabel] || api.context.props.saveLabel;
+        }
+        if (api.context.props.cancelLabel) {
+            cancelLabel = translations[api.context.props.cancelLabel] || api.context.props.cancelLabel;
+        }
+        api.setState("saveLabel", saveLabel);
+        api.setState("cancelLabel", cancelLabel);
+    };
+
+    const updateFieldValues = () => {
+        for (let i = 1; i <= 3; i++) {
+            let field = api.context.props["field"+i];
+            let value = api.context.props["value"+i];
+            let displayValue = api.context.props["displayValue"+i];
+            if (field && value && displayValue) {
+                fields[field].value = value;
+                fields[field].displayValue = displayValue;
+            }
+        }
+    };
+
+    switch (eventName) {
+        case 'MACROPONENT_READY':
+            if (fields) {
+                updateFieldValues();
+                getInitialData();
+            }
+            updateLabel();
+            const heading = translations[api.context.props.title] || api.context.props.title;
+            api.setState("heading", heading);
+            break;
+        case 'SN_FORM_DATA_CONNECTED#FETCH_STATUS_UPDATED':
+            api.setState("gform", {
+                "table": "",
+                "sysId": ""
+            });
+            fields = api.data.gform.nowRecordFormBlob.fields;
+            updateFieldValues();
+            getInitialData();
+            break;
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 05:37:06</sys_created_on>
+        <sys_id>2b85b03947432110ff50249bd36d4354</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Initial Form Data</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_client_script_2b85b03947432110ff50249bd36d4354</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 05:37:06</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

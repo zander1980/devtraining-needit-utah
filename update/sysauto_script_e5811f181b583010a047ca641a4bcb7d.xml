@@ -5,6 +5,7 @@
         <condition/>
         <conditional>false</conditional>
         <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
         <name>Generate Random NeedIt Records</name>
         <offset/>
         <offset_type/>

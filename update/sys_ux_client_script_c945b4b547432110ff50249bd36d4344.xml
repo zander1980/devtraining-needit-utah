@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="On-Call Recommended">4145b4b547432110ff50249bd36d433e</macroponent>
+        <name>empty_state_1/actions</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : "",
+  "message" : "Search all groups",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+	return [{
+    "label": helpers.translateSync("Search all groups"),
+    "variant": "primary"
+  }];
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 05:35:50</sys_created_on>
+        <sys_id>c945b4b547432110ff50249bd36d4344</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>empty_state_1/actions</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_client_script_c945b4b547432110ff50249bd36d4344</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 05:35:50</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+</record_update>

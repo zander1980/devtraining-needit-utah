@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <app_config display_value="Service Operations Workspace">4d69d0ed73c4301045216238edf6a7ea</app_config>
+        <description/>
+        <event_mappings>[ {
+  "eventMappingId" : "cksubbjtkccaaaabbhddhhhsggieebajee",
+  "isConfiguration" : false,
+  "offRowStorageId" : null,
+  "sourceEventApiName" : "sn_sow_interaction.RELOAD_GFORM",
+  "sourceEventCorrelationId" : null,
+  "sourceEventDefinition" : {
+    "apiName" : "sn_sow_interaction.RELOAD_GFORM",
+    "id" : null,
+    "type" : "UXEVENT"
+  },
+  "sourceEventSysId" : null,
+  "targets" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : null,
+    "operation" : {
+      "dataBrokerId" : "dc6e87a5232200100e4bc50947bf654b",
+      "operationName" : "RELOAD",
+      "parentResourceId" : "gform",
+      "payload" : {
+        "type" : "MAP_CONTAINER",
+        "container" : { }
+      }
+    },
+    "targetId" : "cksubbjtkccaaaabbiddhhhsggiiccudfor",
+    "type" : "DATABROKER_OP"
+  } ]
+} ]</event_mappings>
+        <macroponent display_value="Requestor Info">9495f03947432110ff50249bd36d4394</macroponent>
+        <macroponent_config>{
+  "relatedLists" : "@data.gform.nowRecordFormBlob.relatedLists",
+  "shortDescription" : "@data.gform.nowRecordFormBlob.formFieldValues.short_description.value",
+  "table" : "@context.props.table",
+  "recordSysId" : "@context.props.sysId",
+  "userSysId" : "@data.gform.nowRecordFormBlob.formFieldValues.opened_for.value",
+  "label" : "",
+  "bare" : true,
+  "scrollable" : "y",
+  "headerLevel" : "1",
+  "interceptNotifications" : false,
+  "propagateNotifications" : false,
+  "headingOnlyVisibleToScreenReaders" : false
+}</macroponent_config>
+        <name>Requestor Info SNC</name>
+        <order>100</order>
+        <parent_macroponent display_value="Record sow">e305bcf147432110ff50249bd36d43b4</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition>parent.table=interaction</screen_condition>
+        <screen_type display_value="Requester Information">9c95f03947432110ff50249bd36d4375</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-27 05:37:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e895f03947432110ff50249bd36d439a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Requestor Info SNC</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ux_screen_e895f03947432110ff50249bd36d439a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-27 05:37:09</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=e895f03947432110ff50249bd36d439a"/>
+</record_update>
